@@ -1,15 +1,28 @@
 const fs = require('fs');
 const path = require('path');
 
+// const fontLevel = [
+// 	{ '100': 'Thin' },
+// 	{ '200': 'Thin' },
+// 	{ '300': 'Light' },
+// 	{ '400': 'Regular' },
+// 	{ 'regular': 'Regular' },
+// 	{ '500': 'Medium' },
+// 	{ '700': 'Bold' },
+// 	{ '900': 'Black' }
+// ]
+
 const fontLevel = [
-	{ '100': 'Thin' },
-	{ '200': 'Thin' },
-	{ '300': 'Light' },
-	{ '400': 'Regular' },
-	{ 'regular': 'Regular' },
-	{ '500': 'Medium' },
-	{ '700': 'Bold' },
-	{ '900': 'Black' }
+	{ '100': '100' },
+	{ '200': '200' },
+	{ '300': '300' },
+	{ '400': '400' },
+	{ 'regular': '400' },
+	{ '500': '500' },
+	{ '600': '600' },
+	{ '700': '700' },
+	{ '800': '800' },
+	{ '900': '900' }
 ]
 
 const fontType = ['eot', 'woff', 'woff2', 'svg', 'ttf', 'otf'];
@@ -47,21 +60,3 @@ for (let i = 0; i < fontLevel.length; i++) {
 		}
 	}
 }
-
-const fontface = `
-/* noto-sans-kr-100 - korean */
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 100;
-  src: url('../fonts/noto-sans-kr-v25-korean-100.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/noto-sans-kr-v25-korean-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/noto-sans-kr-v25-korean-100.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/noto-sans-kr-v25-korean-100.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/noto-sans-kr-v25-korean-100.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/noto-sans-kr-v25-korean-100.svg#NotoSansKR') format('svg'); /* Legacy iOS */
-}
-`
-
-console.log('typeList:: ', typeList)
